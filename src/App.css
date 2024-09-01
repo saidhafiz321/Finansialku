@@ -1,0 +1,270 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0; /* Light mode background */
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212; /* Dark mode background */
+  color: #e0e0e0;
+}
+
+.app-container {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* Light mode container background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .app-container {
+  background-color: #1f1f1f; /* Dark mode container background */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #333; /* Header text color for light mode */
+}
+
+body.dark-mode h1 {
+  color: #e0e0e0; /* Header text color for dark mode */
+}
+
+.mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: inherit;
+}
+
+.card {
+  background-color: #ffffff; /* Light mode card background */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  min-height: 150px; /* Increased height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content at the top */
+}
+
+body.dark-mode .card {
+  background-color: #1f1f1f; /* Dark mode card background */
+  color: #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333; /* Card heading color for light mode */
+}
+
+body.dark-mode h2 {
+  color: #e0e0e0; /* Card heading color for dark mode */
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Light mode input border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Light mode input background */
+  color: #333;
+}
+
+body.dark-mode input, body.dark-mode select {
+  background-color: #2c2c2c; /* Dark mode input background */
+  color: #e0e0e0;
+  border-color: #444; /* Dark mode input border */
+}
+
+.action-button {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.save-button {
+  background-color: #f1c40f; /* Light mode save button */
+  color: #333;
+}
+
+.reset-button {
+  background-color: #e94560; /* Light mode reset button */
+  color: #fff;
+}
+
+.save-button:hover {
+  background-color: #d4ac0d;
+}
+
+.reset-button:hover {
+  background-color: #d63447;
+}
+
+body.dark-mode .save-button {
+  background-color: #f1c40f; /* Dark mode save button */
+  color: #333;
+}
+
+body.dark-mode .reset-button {
+  background-color: #e94560; /* Dark mode reset button */
+  color: white;
+}
+
+.budget-item {
+  margin-bottom: 15px;
+}
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  color: #333; /* Budget header color for light mode */
+}
+
+body.dark-mode .budget-header {
+  color: #e0e0e0; /* Budget header color for dark mode */
+}
+
+.budget-details {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #666; /* Budget details color for light mode */
+}
+
+body.dark-mode .budget-details {
+  color: #ccc; /* Budget details color for dark mode */
+}
+
+.progress-bar {
+  background-color: #ccc; /* Light mode progress bar background */
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+body.dark-mode .progress-bar {
+  background-color: #444; /* Dark mode progress bar background */
+}
+
+.progress {
+  background-color: #4caf50; /* Progress bar color */
+  height: 100%;
+}
+
+.sort-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.sort-controls select {
+  width: 48%;
+  background-color: #f0f0f0; /* Light mode sort control background */
+  color: #333;
+}
+
+body.dark-mode .sort-controls select {
+  background-color: #2c2c2c; /* Dark mode sort control background */
+  color: #e0e0e0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #666; /* Light mode table text color */
+}
+
+body.dark-mode table {
+  color: #ccc; /* Dark mode table text color */
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ccc; /* Light mode table border */
+}
+
+body.dark-mode th, body.dark-mode td {
+  border-bottom: 1px solid #444; /* Dark mode table border */
+}
+
+th {
+  background-color: #e0e0e0; /* Light mode table header */
+}
+
+body.dark-mode th {
+  background-color: #333; /* Dark mode table header */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  color: inherit;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  background-color: #ffffff; /* Light mode footer background */
+  color: #333;
+  border-top: 1px solid #ccc;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f; /* Dark mode footer background */
+  color: #e0e0e0;
+  border-top: 1px solid #333;
+}
+
+footer a {
+  color: #e94560;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer nav {
+  margin-top: 10px;
+}
