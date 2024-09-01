@@ -5,14 +5,19 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0; /* Light mode background */
+  background-color: #f0f0f0; /* Default Light mode background */
   color: #333;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-  background-color: #121212; /* Dark mode background */
-  color: #e0e0e0;
+  background-color: #161b22; /* Updated dark mode background to match screenshot */
+  color: #c9d1d9; /* Light text color for dark mode */
+}
+
+body.light-mode {
+  background-color: #f0f0f0; /* Light mode background */
+  color: #333; /* Dark text color for light mode */
 }
 
 .app-container {
@@ -22,11 +27,12 @@ body.dark-mode {
   padding: 20px;
   background-color: #ffffff; /* Light mode container background */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode .app-container {
-  background-color: #1f1f1f; /* Dark mode container background */
+  background-color: #1f1f1f; /* Slightly adjusted dark mode container background for contrast */
 }
 
 header {
@@ -43,7 +49,7 @@ h1 {
 }
 
 body.dark-mode h1 {
-  color: #e0e0e0; /* Header text color for dark mode */
+  color: #c9d1d9; /* Header text color for dark mode */
 }
 
 .mode-toggle {
@@ -59,18 +65,16 @@ body.dark-mode h1 {
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
-  min-height: 150px; /* Increased height */
+  min-height: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content at the top */
+  justify-content: flex-start;
 }
 
 body.dark-mode .card {
-  background-color: #1f1f1f; /* Dark mode card background */
-  color: #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  background-color: #21262d; /* Dark mode card background */
 }
 
 h2 {
@@ -81,7 +85,7 @@ h2 {
 }
 
 body.dark-mode h2 {
-  color: #e0e0e0; /* Card heading color for dark mode */
+  color: #c9d1d9; /* Card heading color for dark mode */
 }
 
 input, select {
@@ -96,9 +100,9 @@ input, select {
 }
 
 body.dark-mode input, body.dark-mode select {
-  background-color: #2c2c2c; /* Dark mode input background */
-  color: #e0e0e0;
-  border-color: #444; /* Dark mode input border */
+  background-color: #0d1117; /* Dark mode input background */
+  color: #c9d1d9;
+  border-color: #30363d; /* Dark mode input border */
 }
 
 .action-button {
@@ -112,32 +116,13 @@ body.dark-mode input, body.dark-mode select {
   transition: background-color 0.3s;
 }
 
-.save-button {
-  background-color: #f1c40f; /* Light mode save button */
-  color: #333;
+.save-button, .reset-button {
+  background-color: #f0b429; /* Updated yellow button color to match screenshot */
+  color: #0d1117; /* Dark text color for buttons */
 }
 
-.reset-button {
-  background-color: #e94560; /* Light mode reset button */
-  color: #fff;
-}
-
-.save-button:hover {
-  background-color: #d4ac0d;
-}
-
-.reset-button:hover {
-  background-color: #d63447;
-}
-
-body.dark-mode .save-button {
-  background-color: #f1c40f; /* Dark mode save button */
-  color: #333;
-}
-
-body.dark-mode .reset-button {
-  background-color: #e94560; /* Dark mode reset button */
-  color: white;
+.save-button:hover, .reset-button:hover {
+  background-color: #d4ac0d; /* Slightly darker yellow on hover */
 }
 
 .budget-item {
@@ -153,7 +138,7 @@ body.dark-mode .reset-button {
 }
 
 body.dark-mode .budget-header {
-  color: #e0e0e0; /* Budget header color for dark mode */
+  color: #c9d1d9; /* Budget header color for dark mode */
 }
 
 .budget-details {
@@ -175,7 +160,7 @@ body.dark-mode .budget-details {
 }
 
 body.dark-mode .progress-bar {
-  background-color: #444; /* Dark mode progress bar background */
+  background-color: #30363d; /* Dark mode progress bar background */
 }
 
 .progress {
@@ -196,8 +181,8 @@ body.dark-mode .progress-bar {
 }
 
 body.dark-mode .sort-controls select {
-  background-color: #2c2c2c; /* Dark mode sort control background */
-  color: #e0e0e0;
+  background-color: #0d1117; /* Dark mode sort control background */
+  color: #c9d1d9;
 }
 
 table {
@@ -207,7 +192,7 @@ table {
 }
 
 body.dark-mode table {
-  color: #ccc; /* Dark mode table text color */
+  color: #c9d1d9; /* Dark mode table text color */
 }
 
 th, td {
@@ -217,7 +202,7 @@ th, td {
 }
 
 body.dark-mode th, body.dark-mode td {
-  border-bottom: 1px solid #444; /* Dark mode table border */
+  border-bottom: 1px solid #30363d; /* Dark mode table border */
 }
 
 th {
@@ -250,13 +235,13 @@ footer {
 }
 
 body.dark-mode footer {
-  background-color: #1f1f1f; /* Dark mode footer background */
-  color: #e0e0e0;
-  border-top: 1px solid #333;
+  background-color: #161b22; /* Dark mode footer background */
+  color: #c9d1d9;
+  border-top: 1px solid #30363d;
 }
 
 footer a {
-  color: #e94560;
+  color: #58a6ff; /* Link color */
   text-decoration: none;
   margin: 0 5px;
 }
